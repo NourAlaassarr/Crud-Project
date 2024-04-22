@@ -10,6 +10,7 @@
 </head>
 <body>
     
+    
     <div class=" w-75 mx-auto py-5">
         <h3 class="py-3">Product Manager System</h3>
         <label for="ProductNameInput">Product Name:</label>
@@ -21,6 +22,11 @@
         <label for="ProductDescriptionInput">Product Description:</label>
         <textarea type="text" class="form-control mb-2" id="ProductDescriptionInput"></textarea>
         <button onclick="AddProduct();" class="btn px-5 btn-info" id="addBtn">Add</button>
+    </div>
+    <div class=" w-75 mx-auto py-5 ">
+        
+        <label for="SearchInput">Search:</label>
+        <input type="text" oninput="SearchProduct(this.value);"   placeholder="Search By Name" class="form-control mb-2" id="SearchInput">
     </div>
     <table class="table w-75 mx-auto">
         <thead>

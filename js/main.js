@@ -4,9 +4,9 @@ var Price=document.getElementById("ProductPriceInput");
 var Category=document.getElementById("ProductCategoryInput");
 var Description=document.getElementById("ProductDescriptionInput");
 
-var ProductsArray
+var ProductsArray;
 
-if(localStorage.getItem!=null){
+if(localStorage.getItem("Products")!=null){
     ProductsArray=JSON.parse(localStorage.getItem("Products"));
     displayProducts(ProductsArray);
 }
@@ -51,4 +51,16 @@ function displayProducts(ProductList){
     };
     document.getElementById("tbody").innerHTML=Cartoona;
 
+}
+
+
+function SearchProduct(SearchTerm){
+    var SearchResults=[]
+    for(i=0;i<ProductsArray.length;i++){
+        if(ProductsArray[i].Name.toLowerCase().includes(SearchTerm.toLowerCase())==true){
+            SearchResults.push(ProductsArray[i]);
+        }
+    
+    }
+    displayProducts(SearchResults);
 }
