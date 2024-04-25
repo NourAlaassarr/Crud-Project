@@ -14,11 +14,11 @@
     <div class=" w-75 mx-auto py-5">
         <h3 class="py-3">Product Management System</h3>
         <label for="ProductNameInput">Product Name:</label>
-        <input type="text" class="form-control mb-2" id="ProductNameInput">
+        <input type="text" oninput="validation();"  class="form-control mb-2 " id="ProductNameInput">
         <label for="ProductPriceInput">Product Price:</label>
-        <input type="text" class="form-control mb-2" id="ProductPriceInput">
+        <input type="text" oninput="validation();" class="form-control mb-2 " id="ProductPriceInput">
         <label for="ProductCategoryInput">Product Category:</label>
-        <input type="text" class="form-control mb-2" id="ProductCategoryInput">
+        <input type="text"oninput="validation();" class="form-control mb-2" id="ProductCategoryInput">
         <label for="ProductDescriptionInput">Product Description:</label>
         <textarea type="text" class="form-control mb-2" id="ProductDescriptionInput"></textarea>
         <button onclick="AddProduct();" class="btn px-5 btn-info" id="addBtn">Add</button>
